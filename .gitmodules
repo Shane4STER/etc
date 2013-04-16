@@ -1,0 +1,3 @@
+[submodule "link.sh"]
+	path = link.sh
+	url = https://github.com/acx0/link.sh.git

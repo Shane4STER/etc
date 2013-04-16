@@ -1,0 +1,9 @@
+[user]
+	name = Shane Forster
+	email = cs.4ster@gmail.com
+
+[color]
+	ui = true
+
+[core]
+	editor = vim
