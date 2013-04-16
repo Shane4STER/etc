@@ -11,3 +11,6 @@ alias lal='ll -A'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+#link conf
+alias link.sh='link.sh -u ~/etc/.link.conf'

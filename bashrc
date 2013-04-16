@@ -108,3 +108,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#PATH ADDITIONS
+PATH=$PATH:$HOME/etc/link.sh/link.sh
