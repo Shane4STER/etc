@@ -116,4 +116,4 @@ if ! shopt -oq posix; then
 fi
 
 #PATH ADDITIONS
-PATH=$PATH:$HOME/etc/link.sh/link.sh
+PATH=$PATH:/opt/sdk/platform-tools:/opt/sdk/tools
