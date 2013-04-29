@@ -85,4 +85,29 @@ function netinfo ()
 	echo "---------------------------------------------------"
 }
 
+function exitstatus {
+
+    EXITSTATUS="$?"
+    BOLD="\[\033[1m\]"
+    RED="\[\033[1;31m\]"
+    GREEN="\[\e[32;1m\]"
+    CYAN="\[\033[0;36m\]"
+    BLUE="\[\e[34;1m\]"
+    OFF="\[\033[m\]"
+    if [ "${UID}" -eq 0 ]
+    then
+        PROMPT="[${RED}\u${OFF}@${CYAN}\h ${BLUE}\W${OFF}"
+    else
+        PROMPT="[${GREEN}\u${OFF}@${CYAN}\h ${BLUE}\W${OFF}"
+    fi
+
+    if [ "${EXITSTATUS}" -eq 0 ]
+    then
+       PS1="${PROMPT} ${BOLD}${GREEN}$?${OFF} ]\$ "
+    else
+       PS1="${PROMPT} ${BOLD}${RED}$?${OFF} ]\$ "
+    fi
+
+    PS2="${BOLD}>${OFF} "
+}
 
