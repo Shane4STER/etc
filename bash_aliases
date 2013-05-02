@@ -34,7 +34,7 @@ alias which='type -all'
 alias ..='cd ..'
 alias path='echo -e ${PATH//:/\\n}'
 alias vi='vim'
-alias du='du -h --max-depth=1'
+#alias du='du -h --max-depth=1'
 
 #android sdk
 alias startadb='sudo /opt/sdk/platform-tools/adb start-server'
