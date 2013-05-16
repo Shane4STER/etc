@@ -31,7 +31,7 @@ ZSH_TMUX_AUTOSTART=true
 # DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -46,3 +46,15 @@ plugins=(git debian tmux colored-man extract vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+set NO_BEEP
+bindkey -e
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey  '\eOA'  up-line-or-beginning-search
+bindkey  '\eOB'  down-line-or-beginning-search
+
+bindkey  '\e[A'  up-line-or-beginning-search
+bindkey  '\e[B'  down-line-or-beginning-search
