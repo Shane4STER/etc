@@ -76,4 +76,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+set laststatus=2 
+set rtp+=/home/shane/.powerline/powerline/bindings/vim
 call pathogen#infect()
+
