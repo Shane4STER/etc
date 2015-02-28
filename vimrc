@@ -19,7 +19,7 @@ noremap <Leader>E :qa!<CR> " Quit all windows
 
 "Set color scheme
 set t_Co=254
-color molokai
+"color molokai
 
 " Bind C-<mvmt key> to move around the windows
 map <c-j> <c-w>j
@@ -76,7 +76,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set laststatus=2 
-set rtp+=/home/shane/.powerline/powerline/bindings/vim
-call pathogen#infect()
+"set laststatus=2 
+"set rtp+=/home/shane/.powerline/powerline/bindings/vim
+"call pathogen#infect()
 
