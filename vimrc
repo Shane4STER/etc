@@ -12,6 +12,8 @@ set expandtab
 set modifiable
 syntax on
 
+let mapleader = ","
+
 colorscheme bubblegum-256-dark
 
 let g:ctrlp_map = '<c-p>'
