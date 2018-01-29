@@ -4,51 +4,51 @@
 [submodule ".tmux"]
 	path = tmux
 	url = https://github.com/gpakosz/.tmux.git
-[submodule "vim/start/ctrlp.vim"]
+[submodule "vim/pack/plugins/start/ctrlp.vim"]
 	path = vim/pack/plugins/start/ctrlp.vim
-	url = git@github.com:kien/ctrlp.vim.git
-[submodule "vim/start/nerdtree"]
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/pack/plugins/start/nerdtree"]
 	path = vim/pack/plugins/start/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
-[submodule "vim/start/syntastic"]
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/pack/plugins/start/syntastic"]
 	path = vim/pack/plugins/start/syntastic
-	url = git@github.com:vim-syntastic/syntastic.git
-[submodule "vim/start/vim-airline"]
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/pack/plugins/start/vim-airline"]
 	path = vim/pack/plugins/start/vim-airline
-	url = git@github.com:vim-airline/vim-airline.git
-[submodule "vim/start/vim-airline-themes"]
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/plugins/start/vim-airline-themes"]
 	path = vim/pack/plugins/start/vim-airline-themes
-	url = git@github.com:vim-airline/vim-airline-themes.git
-[submodule "vim/start/vim-fugitive"]
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/pack/plugins/start/vim-fugitive"]
 	path = vim/pack/plugins/start/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
-[submodule "vim/start/vim-gitgutter"]
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/plugins/start/vim-gitgutter"]
 	path = vim/pack/plugins/start/vim-gitgutter
-	url = git@github.com:airblade/vim-gitgutter.git
-[submodule "vim/start/vim-javascript"]
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/pack/plugins/start/vim-javascript"]
 	path = vim/pack/plugins/start/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
-[submodule "vim/start/vim-surround"]
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/pack/plugins/start/vim-surround"]
 	path = vim/pack/plugins/start/vim-surround
-	url = git@github.com:tpope/vim-surround.git
-[submodule "vim/start/vim-colorschemes"]
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/pack/plugins/start/vim-colorschemes"]
 	path = vim/pack/plugins/start/vim-colorschemes
-	url = git@github.com:flazz/vim-colorschemes.git
-[submodule "vim/start/auto-pairs"]
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/pack/plugins/start/auto-pairs"]
 	path = vim/pack/plugins/start/auto-pairs
-	url = git@github.com:jiangmiao/auto-pairs.git
-[submodule "vim/start/tabular"]
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/pack/plugins/start/tabular"]
 	path = vim/pack/plugins/start/tabular
-	url = git@github.com:godlygeek/tabular.git
-[submodule "vim/start/vim-terraform"]
+	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/pack/plugins/start/vim-terraform"]
 	path = vim/pack/plugins/start/vim-terraform
-	url = git@github.com:hashivim/vim-terraform.git
-[submodule "vim/start/nerdcommenter"]
+	url = https://github.com/hashivim/vim-terraform.git
+[submodule "vim/pack/plugins/start/nerdcommenter"]
 	path = vim/pack/plugins/start/nerdcommenter
-	url = git@github.com:scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vim/pack/plugins/start/vim-easymotion"]
 	path = vim/pack/plugins/start/vim-easymotion
-	url = git@github.com:easymotion/vim-easymotion.git
+	url = https://github.com/easymotion/vim-easymotion.git
 [submodule "vim/pack/plugins/start/Align"]
 	path = vim/pack/plugins/start/Align
-	url = git@github.com:vim-scripts/Align.git
+	url = https://github.com/vim-scripts/Align.git
