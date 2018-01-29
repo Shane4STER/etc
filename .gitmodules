@@ -46,3 +46,9 @@
 [submodule "vim/start/nerdcommenter"]
 	path = vim/pack/plugins/start/nerdcommenter
 	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule "vim/pack/plugins/start/vim-easymotion"]
+	path = vim/pack/plugins/start/vim-easymotion
+	url = git@github.com:easymotion/vim-easymotion.git
+[submodule "vim/pack/plugins/start/Align"]
+	path = vim/pack/plugins/start/Align
+	url = git@github.com:vim-scripts/Align.git
