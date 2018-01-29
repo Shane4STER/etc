@@ -4,9 +4,6 @@
 [submodule ".tmux"]
 	path = tmux
 	url = https://github.com/gpakosz/.tmux.git
-[submodule "vim/start/YouCompleteMe"]
-	path = vim/pack/plugins/start/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe.git
 [submodule "vim/start/ctrlp.vim"]
 	path = vim/pack/plugins/start/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
