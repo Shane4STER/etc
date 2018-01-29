@@ -1,6 +1,3 @@
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
 set nocompatible
 set laststatus=2
 set showtabline=2
@@ -13,6 +10,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set modifiable
+syntax on
 
 colorscheme bubblegum-256-dark
 
