@@ -11,10 +11,11 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.zsh/oh-my-zsh
+export ZSH_CUSTOM=$HOME/.zsh/custom
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="bullet-train"
 BULLETTRAIN_CONTEXT_FG="white"
 BULLETTRAIN_NVM_FG="black"
 BULLETTRAIN_CONTEXT_DEFAULT_USER=$USER
