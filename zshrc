@@ -10,15 +10,15 @@ if [[ "$PROFILE_STARTUP" == true ]]; then
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/shaneforster/.oh-my-zsh
-DISABLE_AUTO_TITLE="true"
+export ZSH=$HOME/.zsh/oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bullet-train"
+ZSH_THEME="agnoster"
 BULLETTRAIN_CONTEXT_FG="white"
 BULLETTRAIN_NVM_FG="black"
-BULLETTRAIN_CONTEXT_DEFAULT_USER=shaneforster
+BULLETTRAIN_CONTEXT_DEFAULT_USER=$USER
+DEFAULT_USER=$USER
 BULLETTRAIN_PROMPT_ADD_NEWLINE=false
 BULLETTRAIN_PROMPT_ORDER=(
     status
@@ -35,7 +35,7 @@ BULLETTRAIN_PROMPT_ORDER=(
     cmd_exec_time
 )
 
-BULLETTRAIN_KCTX_KCONFIG=/Users/shaneforster/.kube/config
+BULLETTRAIN_KCTX_KCONFIG=$HOME/.kube/config
 BULLETTRAIN_KCTX_BG=blue
 BULLETTRAIN_KCTX_FG=white
 
@@ -146,8 +146,8 @@ bindkey -M menuselect '^?' undo
 bindkey "\e\e[D" backward-word # alt + <-
 bindkey "\e\e[C" forward-word # alt + ->
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 if [[ "$PROFILE_STARTUP" == true ]]; then
     unsetopt xtrace
