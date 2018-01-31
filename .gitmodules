@@ -64,3 +64,6 @@
 [submodule "zsh/bullet-train.zsh"]
 	path = zsh/bullet-train.zsh
 	url = https://github.com/caiogondim/bullet-train.zsh.git
+[submodule "vim/pack/plugins/start/Clippo"]
+	path = vim/pack/plugins/start/Clippo
+	url = https://github.com/gbigwood/Clippo.git
