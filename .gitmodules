@@ -67,3 +67,6 @@
 [submodule "vim/pack/plugins/start/Clippo"]
 	path = vim/pack/plugins/start/Clippo
 	url = https://github.com/gbigwood/Clippo.git
+[submodule "vim/pack/plugins/start/targets.vim"]
+	path = vim/pack/plugins/start/targets.vim
+	url = https://github.com/wellle/targets.vim.git
