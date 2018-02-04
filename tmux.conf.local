@@ -29,7 +29,7 @@ tmux_conf_new_pane_retain_current_path=true
 # new pane tries to reconnect ssh sessions (experimental), possible values are:
 #   - true
 #   - false (default)
-tmux_conf_new_pane_reconnect_ssh=false
+tmux_conf_new_pane_reconnect_ssh=true
 
 # prompt for session name when creating a new session, possible values are:
 #   - true
@@ -72,7 +72,7 @@ tmux_conf_theme_pane_active_indicator='#00afff'         # light blue
 
 # status line style
 tmux_conf_theme_message_fg='#000000'                    # black
-tmux_conf_theme_message_bg='#ffff00'                    # yellow
+tmux_conf_theme_message_bg='#ff00af'                    # yellow
 tmux_conf_theme_message_attr='bold'
 
 # status line command style (<prefix> : Escape)
@@ -157,8 +157,8 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{uptime_s}
 #     - #{username}
 #     - #{esername_ssh}
-tmux_conf_theme_status_left=' ❐ #S | #{loadavg} , #(sysctl -n vm.loadavg | cut -f 3 -d" ") , #(sysctl -n vm.loadavg | cut -f 4 -d" ") '
-tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},} , %R , %d %b | #(cat $HOME/.local/tmp/metar.latest) | #($HOME/.gpmdbinfo.sh ) '
+tmux_conf_theme_status_left=' ❐ #S | #{loadavg} | #{?battery_status,#{battery_status},}#{?battery_percentage,#{battery_percentage},} '
+tmux_conf_theme_status_right='#{prefix}#{pairing} | #(cat $HOME/.local/tmp/metar.latest) | #($HOME/.gpmdbinfo.sh ) | %R , %d %b %y  '
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
@@ -221,11 +221,11 @@ tmux_conf_battery_vbar_palette='gradient'
 #tmux_conf_battery_vbar_palette='#d70000,#ff5f00,#5fff00'  # red, orange, green
 
 # symbols used to indicate whether battery is charging or discharging
-#tmux_conf_battery_status_charging='↑'       # U+2191
-#tmux_conf_battery_status_discharging='↓'    # U+2193
-tmux_conf_battery_status_charging='⚡ '    # U+26A1
+tmux_conf_battery_status_charging='↑'       # U+2191
+tmux_conf_battery_status_discharging='↓'    # U+2193
+#tmux_conf_battery_status_charging='⚡ '    # U+26A1
 #tmux_conf_battery_status_charging='🔌 '    # U+1F50C
-tmux_conf_battery_status_discharging='🔋 ' # U+1F50B
+#tmux_conf_battery_status_discharging='🔋 ' # U+1F50B
 
 # clock style
 tmux_conf_theme_clock_colour='#00afff'  # light blue

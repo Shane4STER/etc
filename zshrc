@@ -88,6 +88,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+EDITOR='vim'
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
