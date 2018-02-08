@@ -271,9 +271,7 @@ bind-key q command-prompt "split-window -h 'exec vim %%'"
 # move status line to top
 set -g status-position top
 #
-set -g @continuum-restore 'on'
-set -g @resurrect-processes 'glances'
 set -g @resurrect-capture-pane-contents 'on'
+set -g @resurrect-strategy-vim 'session'
 
-run-shell ~/.tmux-resurrect/resurrect.tmux
-#run-shell ~/.tmux-continuum/continuum.tmux
+run-shell ~/.tmux.plugins/tmux-resurrect/resurrect.tmux

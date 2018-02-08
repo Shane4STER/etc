@@ -63,7 +63,7 @@ DISABLE_AUTO_TITLE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -82,7 +82,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker kubectl helm tmux tmuxinator terraform iterm2 brew aws)
+plugins=(docker kubectl helm tmux tmuxinator terraform iterm2 brew aws dircycle vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,7 +139,7 @@ TRAPUSR1() {
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-PATH="$PATH:Library/Python/2.7/bin:/Users/shaneforster/Library/Python/2.7/bin"
+PATH="$PATH:Library/Python/2.7/bin:$HOME/Library/Python/2.7/bin"
 
 zmodload zsh/complist
 bindkey -M menuselect ' ' accept-and-infer-next-history
@@ -167,7 +167,7 @@ complete -C /usr/local/Cellar/terraform/0.10.8/bin/terraform terraform
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/shaneforster/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/shaneforster/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+[[ -f $HOME/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . $HOME/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/shaneforster/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/shaneforster/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[[ -f $HOME/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . $HOME/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
