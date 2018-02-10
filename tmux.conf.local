@@ -263,6 +263,8 @@ set -g mouse on
 # set -g prefix C-a
 # bind C-a send-prefix
 
+bind-key a send-prefix
+
 # quick bindings
 bind-key / command-prompt "split-window -h 'exec man %%'"
 bind-key q command-prompt "split-window -h 'exec vim %%'"

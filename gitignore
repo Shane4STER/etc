@@ -18,3 +18,6 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# Vim Obsession files
+Session.vim

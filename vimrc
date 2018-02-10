@@ -20,6 +20,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let mapleader = ','
 noremap <Leader>s :update<CR>
+
+nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+
 map <space> viw
 map - ddp
 map _ ddkP
