@@ -151,6 +151,7 @@ bindkey "\e\e[C" forward-word # alt + ->
 
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. $HOME/.zsh/scripts/exercism_completion.zsh
 
 if [[ "$PROFILE_STARTUP" == true ]]; then
     unsetopt xtrace
