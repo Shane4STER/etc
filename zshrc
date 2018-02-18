@@ -123,7 +123,7 @@ alias t='todo.sh'
 alias week='gcalcli calw 1'
 alias wx='curl wttr.in/EDI 2> /dev/null | lolcat'
 alias tmux='tmux -2'
-alias htop='top' # Because High Sierra 
+
 pb () {
   curl -F "c=@${1:--}" https://ptpb.pw/
 }

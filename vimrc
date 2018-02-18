@@ -37,7 +37,13 @@ if &term =~ '256color'
       " Disable Background Color Erase (BCE) so that color schemes work
       " properly within 256-color terminals
       set t_ut=
-  endif
+endif
+
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 
 autocmd StdinReadPre * let s:std_in=1
 
