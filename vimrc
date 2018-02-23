@@ -1,6 +1,7 @@
 set nocompatible
 set laststatus=2
 set showtabline=2
+
 set noshowmode
 set noruler
 set number relativenumber
@@ -9,16 +10,32 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set modifiable
 syntax on
 
+set splitbelow
+set splitright " More natural splits
+
+set list listchars=tab:»·,trail:·,nbsp:·  " Show trailing whitespace
+
+" More natural movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <Leader>nt :tabNext<CR>
+nnoremap <Leader>pt :tabprevious<CR>
+
 let mapleader = ","
+
+set wildmenu
+set wildmode=longest:full,full
 
 colorscheme bubblegum-256-dark
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let mapleader = ','
+nnoremap <leader>. :CtrlPTag<cr>
+
 noremap <Leader>s :update<CR>
 
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
@@ -28,6 +45,8 @@ map - ddp
 map _ ddkP
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+noremap <Leader>t :TagbarToggle<CR>
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
