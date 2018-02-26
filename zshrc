@@ -9,8 +9,6 @@ ZSH_THEME="bullet-train"
 # Bullettrain config
 BULLETTRAIN_CONTEXT_FG="white"
 BULLETTRAIN_NVM_FG="black"
-BULLETTRAIN_CONTEXT_DEFAULT_USER=$USER
-DEFAULT_USER=$USER
 BULLETTRAIN_KCTX_KCONFIG=$HOME/.kube/config
 BULLETTRAIN_KCTX_BG=blue
 BULLETTRAIN_KCTX_FG=white
@@ -60,6 +58,12 @@ case $(uname -s) in
     source $HOME/.zsh/zsh-os-conf/linux-pre-omz.zsh
     ;;
 esac
+
+if [[ -a $HOME/.zsh/zsh-os-conf/local-pre/*.zsh ]]; then
+  for file in $HOME/.zsh/zsh-os-conf/local-pre/*.zsh; do
+    source $file
+  done
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,4 +119,10 @@ case $(uname -s) in
     source $HOME/.zsh/zsh-os-conf/linux-post-omz.zsh 
     ;;
 esac
+
+if [[ -a $HOME/.zsh/zsh-os-conf/local-post/*.zsh ]]; then
+  for file in $HOME/.zsh/zsh-os-conf/local-post/*.zsh; do
+    source $file
+  done
+fi
 autoload -U +X bashcompinit && bashcompinit
