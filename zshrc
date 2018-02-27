@@ -59,11 +59,9 @@ case $(uname -s) in
     ;;
 esac
 
-if [[ -a $HOME/.zsh/zsh-os-conf/local-pre/*.zsh ]]; then
-  for file in $HOME/.zsh/zsh-os-conf/local-pre/*.zsh; do
-    source $file
-  done
-fi
+for file in "$(find $HOME/.zsh/zsh-os-conf/local-pre -maxdepth 1 -name '*.zsh' -print -quit)"; do
+  source $file
+done
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,9 +118,8 @@ case $(uname -s) in
     ;;
 esac
 
-if [[ -a $HOME/.zsh/zsh-os-conf/local-post/*.zsh ]]; then
-  for file in $HOME/.zsh/zsh-os-conf/local-post/*.zsh; do
-    source $file
-  done
-fi
+for file in "$(find $HOME/.zsh/zsh-os-conf/local-post -maxdepth 1 -name '*.zsh' -print -quit)"; do
+  source $file
+done
+
 autoload -U +X bashcompinit && bashcompinit
