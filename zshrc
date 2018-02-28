@@ -59,7 +59,10 @@ case $(uname -s) in
     ;;
 esac
 
-for file in "$(find $HOME/.zsh/zsh-os-conf/local-pre -maxdepth 1 -name '*.zsh' -print -quit)"; do
+
+PREFILES=($HOME/.zsh/zsh-os-conf/local-pre/*.zsh(N))
+
+for file in $PREFILES; do
   source $file
 done
 
@@ -118,7 +121,9 @@ case $(uname -s) in
     ;;
 esac
 
-for file in "$(find $HOME/.zsh/zsh-os-conf/local-post -maxdepth 1 -name '*.zsh' -print -quit)"; do
+POSTFILES=($HOME/.zsh/zsh-os-conf/local-post/*.zsh(N))
+
+for file in $POSTFILES; do
   source $file
 done
 
