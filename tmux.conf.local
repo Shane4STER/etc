@@ -265,6 +265,12 @@ bind C-a send-prefix
 
 bind-key a send-prefix
 
+# Rebind hjkl to not repeat
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
 # quick bindings
 bind-key / command-prompt "split-window -h 'exec man %%'"
 bind-key q command-prompt "split-window -h 'exec vim %%'"
