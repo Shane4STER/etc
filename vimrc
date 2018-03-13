@@ -38,6 +38,9 @@ nnoremap <leader>. :CtrlPTag<cr>
 
 noremap <Leader>s :update<CR>
 
+nnoremap <Leader>sc :set spell spelllang=en_gb<CR>
+nnoremap <Leader>ns :set nospell<CR>
+
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
 map <space> viw
