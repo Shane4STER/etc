@@ -55,6 +55,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme= "bubblegum"
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:systastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['pycodestyle']
+
 if &term =~ '256color'
       " Disable Background Color Erase (BCE) so that color schemes work
       " properly within 256-color terminals
