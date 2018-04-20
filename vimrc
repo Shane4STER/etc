@@ -51,6 +51,66 @@ let NERDTreeShowHidden=1
 
 noremap <Leader>t :TagbarToggle<CR>
 
+" CtrlP
+nnoremap <silent> <leader>o :CtrlP<CR>
+nnoremap <silent> <leader>t :CtrlPTag<cr>
+nnoremap <silent> <leader>b :CtrlPBuffer<cr>
+nnoremap <silent> <leader>l :CtrlPLine<cr>
+nnoremap <silent> <leader>b :TagbarToggle<CR>
+nnoremap <silent> ; :CtrlPBuffer<CR>
+
+" ctags/tagbar
+nnoremap <leader>f :ta<space>
+
+" Auto open the TagBar when file is supported
+autocmd FileType * nested :call tagbar#autoopen(0)
+
+let g:tagbar_compact = 1
+
+let g:tagbar_type_ansible = {
+    \ 'ctagstype' : 'ansible',
+    \ 'kinds' : [
+    \ 't:tasks',
+    \ 'h:hosts'
+    \ ],
+    \ 'sort' : 0
+    \ }
+
+let g:tagbar_type_terraform = {
+    \ 'ctagstype' : 'terraform',
+    \ 'kinds' : [
+    \ 'r:resources',
+    \ 'm:modules',
+    \ 'o:outputs',
+    \ 'v:variables',
+    \ 'f:tfvars'
+    \ ],
+    \ 'sort' : 0
+    \ }
+
+let g:tagbar_type_make = {
+    \ 'kinds':[
+    \ 'm:macros',
+    \ 't:targets'
+    \ ]
+    \}
+
+let g:tagbar_type_sh = {
+    \ 'kinds':[
+    \ 'f:functions',
+    \ 'c:constants'
+    \ ]
+    \}
+
+let g:tagbar_type_markdown = {
+    \ 'ctagstype' : 'markdown',
+    \ 'kinds' : [
+    \ 'h:Heading_L1',
+    \ 'i:Heading_L2',
+    \ 'k:Heading_L3'
+    \ ]
+    \ }
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme= "bubblegum"
