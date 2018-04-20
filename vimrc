@@ -54,7 +54,6 @@ noremap <Leader>t :TagbarToggle<CR>
 " CtrlP
 nnoremap <silent> <leader>o :CtrlP<CR>
 nnoremap <silent> <leader>t :CtrlPTag<cr>
-nnoremap <silent> <leader>b :CtrlPBuffer<cr>
 nnoremap <silent> <leader>l :CtrlPLine<cr>
 nnoremap <silent> <leader>b :TagbarToggle<CR>
 nnoremap <silent> ; :CtrlPBuffer<CR>
