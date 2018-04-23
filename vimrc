@@ -43,7 +43,8 @@ nnoremap <Leader>ns :set nospell<CR>
 
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
-map <space> viw
+nnoremap <Space> @q
+
 map - ddp
 map _ ddkP
 map <C-n> :NERDTreeToggle<CR>
@@ -109,6 +110,8 @@ let g:tagbar_type_markdown = {
     \ 'k:Heading_L3'
     \ ]
     \ }
+
+let g:easytags_async = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
