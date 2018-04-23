@@ -1,4 +1,3 @@
-set nocompatible
 set laststatus=2
 set showtabline=2
 
@@ -37,6 +36,7 @@ let g:ctrlp_cmd = 'CtrlP'
 nnoremap <leader>. :CtrlPTag<cr>
 
 noremap <Leader>s :update<CR>
+noremap <Leader>nn :relativenumber!<CR>
 
 nnoremap <Leader>sc :set spell spelllang=en_gb<CR>
 nnoremap <Leader>ns :set nospell<CR>
@@ -126,12 +126,6 @@ if &term =~ '256color'
       " properly within 256-color terminals
       set t_ut=
 endif
-
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
-augroup END
 
 autocmd StdinReadPre * let s:std_in=1
 
