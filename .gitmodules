@@ -88,3 +88,12 @@
 [submodule "vim/pack/plugins/start/vim-misc"]
 	path = vim/pack/plugins/start/vim-misc
 	url = https://github.com/xolox/vim-misc.git
+[submodule "vim/pack/plugins/start/VimCompletesMe"]
+	path = vim/pack/plugins/start/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe.git
+[submodule "vim/pack/plugins/start/ultisnips"]
+	path = vim/pack/plugins/start/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/pack/plugins/start/vim-snippets"]
+	path = vim/pack/plugins/start/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
