@@ -97,3 +97,6 @@
 [submodule "vim/pack/plugins/start/vim-snippets"]
 	path = vim/pack/plugins/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/pack/plugins/start/Colorizer"]
+	path = vim/pack/plugins/start/Colorizer
+	url = https://github.com/chrisbra/Colorizer.git
