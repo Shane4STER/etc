@@ -100,3 +100,12 @@
 [submodule "vim/pack/plugins/start/Colorizer"]
 	path = vim/pack/plugins/start/Colorizer
 	url = https://github.com/chrisbra/Colorizer.git
+[submodule "vim/pack/plugins/start/vim-pug"]
+	path = vim/pack/plugins/start/vim-pug
+	url = https://github.com/digitaltoad/vim-pug.git
+[submodule "vim/pack/plugins/start/vim-node"]
+	path = vim/pack/plugins/start/vim-node
+	url = https://github.com/moll/vim-node.git
+[submodule "vim/pack/plugins/start/vim-json"]
+	path = vim/pack/plugins/start/vim-json
+	url = https://github.com/elzr/vim-json.git

@@ -123,6 +123,33 @@ let g:syntastic_check_on_open = 1
 let g:systastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['pycodestyle']
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+
+" Custom syntastic settings:
+function s:find_eslintrc(dir)
+    let l:found = globpath(a:dir, '.jshintrc')
+    if filereadable(l:found)
+        return l:found
+    endif
+
+    let l:parent = fnamemodify(a:dir, ':h')
+    if l:parent != a:dir
+        return s:find_eslintrc(l:parent)
+    endif
+
+    return "~/.eslintrc"
+endfunction
+
+function UpdateESLintConf()
+    let l:dir = expand('%:p:h')
+    let l:eslintrc = s:find_eslintrc(l:dir)
+    let g:syntastic_javascript_eslint_args = l:eslintrc
+endfunction
+
+au BufEnter * call UpdateESLintConf()
+
+autocmd BufNewFile,BufRead .eslintrc set ft=json
 
 if &term =~ '256color'
       " Disable Background Color Erase (BCE) so that color schemes work
