@@ -106,6 +106,9 @@
 [submodule "vim/pack/plugins/start/vim-node"]
 	path = vim/pack/plugins/start/vim-node
 	url = https://github.com/moll/vim-node.git
+[submodule "vim/pack/plugins/start/aws-vim"]
+	path = vim/pack/plugins/start/aws-vim
+	url = https://github.com/m-kat/aws-vim.git
 [submodule "vim/pack/plugins/start/vim-json"]
 	path = vim/pack/plugins/start/vim-json
 	url = https://github.com/elzr/vim-json.git

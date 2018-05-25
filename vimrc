@@ -151,6 +151,10 @@ au BufEnter * call UpdateESLintConf()
 
 autocmd BufNewFile,BufRead .eslintrc set ft=json
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 if &term =~ '256color'
       " Disable Background Color Erase (BCE) so that color schemes work
       " properly within 256-color terminals
