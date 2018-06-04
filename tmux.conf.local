@@ -273,7 +273,7 @@ bind-key l select-pane -R
 
 # quick bindings
 bind-key / command-prompt "split-window -h 'exec man %%'"
-bind-key q command-prompt "split-window -h 'exec vim %%'"
+bind-key e command-prompt "split-window -h 'exec vim %%'"
 
 
 # move status line to top

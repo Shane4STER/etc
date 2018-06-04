@@ -10,6 +10,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 syntax on
+set foldmethod=syntax
+set foldlevelstart=20
 
 set splitbelow
 set splitright " More natural splits
