@@ -112,6 +112,8 @@ source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export NVM_DIR="$HOME/.nvm"
 
+export PATH="$PATH:$HOME/.scripts"
+
 case $(uname -s) in
   *Darwin*)
     source $HOME/.zsh/zsh-os-conf/osx-post-omz.zsh
