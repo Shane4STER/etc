@@ -157,6 +157,13 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+let g:nd_themes = [
+  \ ['sunrise+0', 'Tomorrow', 'light'],
+  \ ['sunset+0', 'cobalt2', 'dark'],
+  \ ]
+let g:nd_latitude = '55'
+let g:nd_timeshift = '0'
+
 if &term =~ '256color'
       " Disable Background Color Erase (BCE) so that color schemes work
       " properly within 256-color terminals

@@ -115,3 +115,6 @@
 [submodule "vim/pack/plugins/start/vim-rhubarb"]
 	path = vim/pack/plugins/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "vim/pack/plugins/start/night-and-day"]
+	path = vim/pack/plugins/start/night-and-day
+	url = https://github.com/nightsense/night-and-day.git
