@@ -31,7 +31,7 @@ let mapleader = ","
 set wildmenu
 set wildmode=longest:full,full
 
-colorscheme cobalt2
+colorscheme Tomorrow
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -117,7 +117,7 @@ let g:easytags_async = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme= "cobalt2"
+let g:airline_theme= "tomorrow"
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -159,7 +159,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:nd_themes = [
   \ ['sunrise+0', 'Tomorrow', 'light'],
-  \ ['sunset+0', 'cobalt2', 'dark'],
+  \ ['sunset+0', 'Tomorrow-Night', 'dark'],
   \ ]
 let g:nd_latitude = '55'
 let g:nd_timeshift = '0'
