@@ -34,12 +34,6 @@
 [submodule "vim/pack/plugins/start/vim-colorschemes"]
 	path = vim/pack/plugins/start/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
-[submodule "vim/pack/plugins/start/auto-pairs"]
-	path = vim/pack/plugins/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule "vim/pack/plugins/start/tabular"]
-	path = vim/pack/plugins/start/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule "vim/pack/plugins/start/vim-terraform"]
 	path = vim/pack/plugins/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
@@ -49,9 +43,6 @@
 [submodule "vim/pack/plugins/start/vim-easymotion"]
 	path = vim/pack/plugins/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
-[submodule "vim/pack/plugins/start/Align"]
-	path = vim/pack/plugins/start/Align
-	url = https://github.com/vim-scripts/Align.git
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
@@ -64,9 +55,6 @@
 [submodule "zsh/bullet-train.zsh"]
 	path = zsh/bullet-train.zsh
 	url = https://github.com/caiogondim/bullet-train.zsh.git
-[submodule "vim/pack/plugins/start/Clippo"]
-	path = vim/pack/plugins/start/Clippo
-	url = https://github.com/gbigwood/Clippo.git
 [submodule "vim/pack/plugins/start/targets.vim"]
 	path = vim/pack/plugins/start/targets.vim
 	url = https://github.com/wellle/targets.vim.git
@@ -76,9 +64,6 @@
 [submodule "vim/pack/plugins/start/vim-obsession"]
 	path = vim/pack/plugins/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
-[submodule "vim/pack/plugins/start/vim-indent-guides"]
-	path = vim/pack/plugins/start/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "vim/pack/plugins/start/tagbar"]
 	path = vim/pack/plugins/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
@@ -91,12 +76,6 @@
 [submodule "vim/pack/plugins/start/VimCompletesMe"]
 	path = vim/pack/plugins/start/VimCompletesMe
 	url = https://github.com/ajh17/VimCompletesMe.git
-[submodule "vim/pack/plugins/start/ultisnips"]
-	path = vim/pack/plugins/start/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/pack/plugins/start/vim-snippets"]
-	path = vim/pack/plugins/start/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "vim/pack/plugins/start/Colorizer"]
 	path = vim/pack/plugins/start/Colorizer
 	url = https://github.com/chrisbra/Colorizer.git

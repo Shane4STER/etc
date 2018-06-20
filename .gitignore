@@ -1,5 +1,9 @@
 *.swp
 zsh/zsh-os-conf/local-pre/*
-!zsh/zsh-os-conf/local-pre/.vimkeep
+!zsh/zsh-os-conf/local-pre/.gitkeep
 zsh/zsh-os-conf/local-post/*
-!zsh/zsh-os-conf/local-post/.vimkeep
+!zsh/zsh-os-conf/local-post/.gitkeep
+vim/swap/*
+!vim/swap/.gitkeep
+vim/undo/*
+!vim/undo/.gitkeep
