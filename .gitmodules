@@ -97,3 +97,12 @@
 [submodule "vim/pack/plugins/start/night-and-day"]
 	path = vim/pack/plugins/start/night-and-day
 	url = https://github.com/nightsense/night-and-day.git
+[submodule "vim/pack/plugins/start/lista.nvim"]
+	path = vim/pack/plugins/start/lista.nvim
+	url = https://github.com/lambdalisue/lista.nvim.git
+[submodule "vim/pack/plugins/start/vim-rplugin"]
+	path = vim/pack/plugins/start/vim-rplugin
+	url = https://github.com/lambdalisue/vim-rplugin.git
+[submodule "vim/pack/plugins/start/ansible-vim"]
+	path = vim/pack/plugins/start/ansible-vim
+	url = https://github.com/pearofducks/ansible-vim.git
