@@ -106,3 +106,6 @@
 [submodule "vim/pack/plugins/start/ansible-vim"]
 	path = vim/pack/plugins/start/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim.git
+[submodule "vim/pack/plugins/start/coverage.vim"]
+	path = vim/pack/plugins/start/coverage.vim
+	url = https://github.com/ruanyl/coverage.vim.git
