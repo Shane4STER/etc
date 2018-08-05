@@ -1,6 +1,7 @@
 [user]
   name = Shane Forster
   email = me@shaneforster.ca
+  signingkey = 0F87BB9A
 
 [color]
   ui = true
@@ -14,3 +15,7 @@
   lg = !"git lg1"
 [github]
   user = shane4ster
+[gpg]
+  program = gpg
+[commit]
+  gpgsign = true
