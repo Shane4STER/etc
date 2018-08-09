@@ -1,8 +1,5 @@
 " Config
 
-" Auto open the TagBar when file is supported
-autocmd FileType * nested :call tagbar#autoopen(0)
-
 let g:tagbar_compact = 1
 
 let g:tagbar_type_ansible = {
@@ -51,4 +48,4 @@ let g:tagbar_type_markdown = {
 
 " Bindings
 
-noremap <silent> <Leader>t :TagbarToggle<CR>
+noremap <silent> <Leader>T :TagbarToggle<CR>

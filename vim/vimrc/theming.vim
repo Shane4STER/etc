@@ -1,11 +1,3 @@
-" General Config
-set laststatus=2
-set showtabline=2
-set noshowmode
-set noruler
-set number relativenumber
-set encoding=utf-8
-
 " Disable Background Color Erase (BCE) so that color schemes work
 " properly within 256-color terminals
 if &term =~ '256color'

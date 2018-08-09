@@ -64,8 +64,8 @@
 [submodule "vim/pack/plugins/start/vim-obsession"]
 	path = vim/pack/plugins/start/vim-obsession
 	url = https://github.com/tpope/vim-obsession.git
-[submodule "vim/pack/plugins/start/tagbar"]
-	path = vim/pack/plugins/start/tagbar
+[submodule "vim/pack/plugins/opt/tagbar"]
+	path = vim/pack/plugins/opt/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 [submodule "vim/pack/plugins/start/vim-easytags"]
 	path = vim/pack/plugins/start/vim-easytags
@@ -73,11 +73,11 @@
 [submodule "vim/pack/plugins/start/vim-misc"]
 	path = vim/pack/plugins/start/vim-misc
 	url = https://github.com/xolox/vim-misc.git
-[submodule "vim/pack/plugins/start/VimCompletesMe"]
-	path = vim/pack/plugins/start/VimCompletesMe
+[submodule "vim/pack/plugins/opt/VimCompletesMe"]
+	path = vim/pack/plugins/opt/VimCompletesMe
 	url = https://github.com/ajh17/VimCompletesMe.git
-[submodule "vim/pack/plugins/start/Colorizer"]
-	path = vim/pack/plugins/start/Colorizer
+[submodule "vim/pack/plugins/opt/Colorizer"]
+	path = vim/pack/plugins/opt/Colorizer
 	url = https://github.com/chrisbra/Colorizer.git
 [submodule "vim/pack/plugins/start/vim-pug"]
 	path = vim/pack/plugins/start/vim-pug
@@ -91,9 +91,6 @@
 [submodule "vim/pack/plugins/start/vim-json"]
 	path = vim/pack/plugins/start/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "vim/pack/plugins/start/vim-rhubarb"]
-	path = vim/pack/plugins/start/vim-rhubarb
-	url = https://github.com/tpope/vim-rhubarb.git
 [submodule "vim/pack/plugins/start/night-and-day"]
 	path = vim/pack/plugins/start/night-and-day
 	url = https://github.com/nightsense/night-and-day.git
