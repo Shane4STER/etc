@@ -5,7 +5,7 @@ if &term =~ '256color'
 endif
 
 " Base colourscheme
-colorscheme Tomorrow
+" colorscheme Tomorrow
 
 " Time based colourscheme base on night-and-day
 let g:nd_themes = [
