@@ -31,7 +31,7 @@
 [submodule "vim/pack/plugins/start/vim-surround"]
 	path = vim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/pack/plugins/start/vim-colorschemes"]
+[submodule "vim/pack/plugins/opt/vim-colorschemes"]
 	path = vim/pack/plugins/opt/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
 [submodule "vim/pack/plugins/start/vim-terraform"]
