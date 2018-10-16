@@ -46,7 +46,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker tmux terraform aws vi-mode history-substring-search httpie)
+plugins=(docker tmux terraform aws vi-mode history-substring-search gpg-agent httpie)
 
 ZSH_TMUX_AUTOSTART=true
 
@@ -79,7 +79,6 @@ KEYTIMEOUT=1
 
 alias tmux='tmux -2'
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  # This loads nvm
-alias git='noglob git'
 
 ### FUNCTIONS
 
