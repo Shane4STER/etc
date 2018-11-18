@@ -68,7 +68,7 @@
 	path = vim/pack/plugins/opt/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 [submodule "vim/pack/plugins/start/vim-easytags"]
-	path = vim/pack/plugins/start/vim-easytags
+	path = vim/pack/plugins/opt/vim-easytags
 	url = https://github.com/xolox/vim-easytags.git
 [submodule "vim/pack/plugins/start/vim-misc"]
 	path = vim/pack/plugins/start/vim-misc
