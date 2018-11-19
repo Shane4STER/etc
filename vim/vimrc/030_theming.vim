@@ -9,8 +9,8 @@ endif
 
 " Time based colourscheme base on night-and-day
 let g:nd_themes = [
-  \ ['sunrise+0', 'Tomorrow', 'light'],
-  \ ['sunset+0', 'Tomorrow-Night', 'dark'],
+  \ ['sunrise+0', 'colorful256', 'light'],
+  \ ['sunset+0', 'colorful256', 'dark'],
   \ ]
 " Edinburgh(ish)
 let g:nd_latitude = '55'
