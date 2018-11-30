@@ -5,7 +5,6 @@ PATH="$PATH:Library/Python/2.7/bin:$HOME/Library/Python/2.7/bin"
 export GPG_TTY=$(tty)
 
 ### ALIASES
-alias brew-update='brew update && brew upgrade `brew outdated --quiet`'
 
 ### FUNCTIONS
 
