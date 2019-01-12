@@ -124,3 +124,6 @@
 [submodule "vim/pack/plugins/start/vim-dasht"]
 	path = vim/pack/plugins/start/vim-dasht
 	url = https://github.com/sunaku/vim-dasht.git
+[submodule "vim/pack/plugins/start/vim-gnupg"]
+	path = vim/pack/plugins/start/vim-gnupg
+	url = https://github.com/jamessan/vim-gnupg.git
