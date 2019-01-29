@@ -127,3 +127,9 @@
 [submodule "vim/pack/plugins/start/vim-gnupg"]
 	path = vim/pack/plugins/start/vim-gnupg
 	url = https://github.com/jamessan/vim-gnupg.git
+[submodule "vim/pack/plugins/start/vim-tmux-navigator"]
+	path = vim/pack/plugins/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "tmux.plugins/vim-tmux-navigator"]
+	path = tmux.plugins/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
