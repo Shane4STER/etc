@@ -133,3 +133,9 @@
 [submodule "tmux.plugins/vim-tmux-navigator"]
 	path = tmux.plugins/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/pack/plugins/start/typescript-vim"]
+	path = vim/pack/plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/pack/plugins/start/tsuquyomi"]
+	path = vim/pack/plugins/start/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
