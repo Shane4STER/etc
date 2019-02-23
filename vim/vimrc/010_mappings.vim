@@ -24,3 +24,6 @@ noremap <Leader>nn :relativenumber!<CR>
 " Move line up/down
 map - ddp
 map _ ddkP
+
+" For when you forget to open vim with sudo
+cnoremap sudow w !sudo tee % >/dev/null
