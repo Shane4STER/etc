@@ -8,6 +8,7 @@ set wildignore+=*/tmp/*,*.swp,*/node_modules/*,*/.git/*
 set incsearch
 set hlsearch
 
+set completeopt=menuone,preview,noinsert
 set term=xterm-256color
 
 " Swap files in one directory
