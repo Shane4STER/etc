@@ -5,16 +5,7 @@ if &term =~ '256color'
 endif
 
 " Base colourscheme
-" colorscheme Tomorrow
-
-" Time based colourscheme base on night-and-day
-let g:nd_themes = [
-  \ ['sunrise+0', 'colorful256', 'light'],
-  \ ['sunset+0', 'colorful256', 'dark'],
-  \ ]
-" Edinburgh(ish)
-let g:nd_latitude = '55'
-let g:nd_timeshift = '0'
+colorscheme colorful256
 
 "Airline Theme
 let g:airline#extensions#tabline#enabled = 1

@@ -89,9 +89,6 @@
 [submodule "vim/pack/plugins/start/vim-json"]
 	path = vim/pack/plugins/start/vim-json
 	url = https://github.com/elzr/vim-json.git
-[submodule "vim/pack/plugins/start/night-and-day"]
-	path = vim/pack/plugins/start/night-and-day
-	url = https://github.com/nightsense/night-and-day.git
 [submodule "vim/pack/plugins/start/lista.nvim"]
 	path = vim/pack/plugins/start/lista.nvim
 	url = https://github.com/lambdalisue/lista.nvim.git
