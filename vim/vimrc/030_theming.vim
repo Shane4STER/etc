@@ -5,10 +5,10 @@ if &term =~ '256color'
 endif
 
 " Base colourscheme
-colorscheme colorful256
+colorscheme cobalt2
 
 "Airline Theme
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme= "tomorrow"
+let g:airline_theme= "cobalt2"
 
