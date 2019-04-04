@@ -1,7 +1,7 @@
 # This file is sourced only on OSX after OMZ is loaded. Use it to set osx specific aliases, functions and sources.
 
 ### ENVIRONMENT
-PATH="$PATH:/usr/local/sbin:Library/Python/3.7/bin:$HOME:/Library/Python/3.7/bin:Library/Python/2.7/bin:$HOME/Library/Python/2.7/bin"
+PATH="$PATH:/usr/local/sbin"
 export GPG_TTY=$(tty)
 
 ### ALIASES

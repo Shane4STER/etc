@@ -50,7 +50,6 @@ plugins=(
     docker
     tmux
     terraform
-    pyenv
     aws
     vi-mode
     history-substring-search
