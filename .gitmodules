@@ -133,8 +133,8 @@
 [submodule "vim/pack/plugins/start/tsuquyomi"]
 	path = vim/pack/plugins/start/tsuquyomi
 	url = https://github.com/Quramy/tsuquyomi.git
-[submodule "zsh/zsh-completions"]
-	path = zsh/zsh-completions
+[submodule "zsh/custom/plugins/zsh-completions"]
+	path = zsh/custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
 [submodule "vim/pack/plugins/start/YouCompleteMe"]
 	path = vim/pack/plugins/start/YouCompleteMe
