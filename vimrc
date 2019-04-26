@@ -17,11 +17,3 @@ set directory^=$HOME/.vim/swap//
 " Persistent undo
 set undofile
 set undodir=~/.vim/undo
-
-
-" Source configs:
-
-for f in split(glob('~/.vim/vimrc/*.vim'), '\n')
-  exe 'source' f
-endfor
-
