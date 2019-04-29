@@ -2,10 +2,8 @@
   name = Shane Forster
   email = me@shaneforster.ca
   signingkey = 0F87BB9A
-
 [color]
   ui = true
-
 [core]
   editor = vim
   excludesfile = ~/.gitignore
@@ -24,3 +22,7 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[merge]
+  tool = vimdiff
+  prompt = false
+  conflictstyle = diff3
