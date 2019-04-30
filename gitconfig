@@ -26,3 +26,7 @@
   tool = vimdiff
   prompt = false
   conflictstyle = diff3
+[difftool]
+  prompt = false
+[diff]
+  tool = vimdiff
