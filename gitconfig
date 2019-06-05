@@ -30,3 +30,5 @@
   prompt = false
 [diff]
   tool = vimdiff
+[include]
+  path = ~/.gitconfig.overrides
