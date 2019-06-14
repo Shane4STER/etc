@@ -17,6 +17,8 @@ nnoremap <Leader>ns :set nospell<CR>
 
 " Toggle hlsearch
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+" Clear last search
+noremap <silent> <Leader>c :set hlsearch!<CR>
 
 " Toggle relative numbering
 noremap <Leader>nn :relativenumber!<CR>
