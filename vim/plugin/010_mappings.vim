@@ -31,6 +31,6 @@ map _ ddkP
 cnoremap sudow w !sudo tee % >/dev/null
 
 " vimdiff mergetool bindings
-nnoremap <Leader>gl :diffget LOCAL
-nnoremap <Leader>gb :diffget BASE
-nnoremap <Leader>gr :diffget REMOTE
+nnoremap <Leader>gl :diffget LOCAL<CR>
+nnoremap <Leader>gb :diffget BASE<CR>
+nnoremap <Leader>gr :diffget REMOTE<CR>
