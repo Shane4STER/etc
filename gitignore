@@ -21,3 +21,6 @@ Icon
 
 # Vim Obsession files
 Session.vim
+
+# Orig files created by mergetool
+*.orig
