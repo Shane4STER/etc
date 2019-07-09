@@ -3,12 +3,15 @@
 if &term =~ '256color'
       set t_ut=
 endif
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 
 " Base colourscheme
-colorscheme cobalt2
+let g:jellybeans_use_term_italics = 1
+colorscheme jellybeans
 
 "Airline Theme
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme= "cobalt2"
+let g:airline_theme= "jellybeans"
 
