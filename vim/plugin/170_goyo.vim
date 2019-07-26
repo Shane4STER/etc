@@ -20,7 +20,7 @@ function! s:goyo_leave()
   set showmode
   set showcmd
   set scrolloff=5
-  colorscheme cobalt2
+  colorscheme jellybeans
   Limelight!
 endfunction
 
