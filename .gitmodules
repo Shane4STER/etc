@@ -105,3 +105,6 @@
 [submodule "vim/pack/plugins/start/ctrlp.vim"]
 	path = vim/pack/plugins/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "vim/pack/plugins/start/scratch.vim"]
+	path = vim/pack/plugins/start/scratch.vim
+	url = https://github.com/mtth/scratch.vim
