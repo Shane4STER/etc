@@ -24,3 +24,6 @@ Session.vim
 
 # Orig files created by mergetool
 *.orig
+
+# Vim scratch files
+.scratch.vim

@@ -7,3 +7,4 @@ set number relativenumber
 set encoding=utf-8
 set scrolloff=10
 set viminfo='100,<100,s20,h
+set hidden
