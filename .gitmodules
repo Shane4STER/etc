@@ -108,3 +108,12 @@
 [submodule "vim/pack/plugins/start/scratch.vim"]
 	path = vim/pack/plugins/start/scratch.vim
 	url = https://github.com/mtth/scratch.vim
+[submodule "vim/pack/plugins/start/vim-unimpaired"]
+	path = vim/pack/plugins/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/pack/plugins/start/vim-repeat"]
+	path = vim/pack/plugins/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/pack/plugins/start/vim-yoink"]
+	path = vim/pack/plugins/start/vim-yoink
+	url = https://github.com/svermeulen/vim-yoink.git
