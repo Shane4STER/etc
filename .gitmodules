@@ -117,3 +117,6 @@
 [submodule "vim/pack/plugins/start/vim-yoink"]
 	path = vim/pack/plugins/start/vim-yoink
 	url = https://github.com/svermeulen/vim-yoink.git
+[submodule "vim/pack/plugins/start/undotree"]
+	path = vim/pack/plugins/start/undotree
+	url = https://github.com/mbbill/undotree.git
