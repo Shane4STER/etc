@@ -58,6 +58,8 @@ plugins=(
     gpg-agent
     httpie
     bat
+    asdf
+    gcloud
     exa
     zsh-completions
 )
@@ -93,6 +95,7 @@ KEYTIMEOUT=1
 
 alias tmux='tmux -2'
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  # This loads nvm
+alias kc='nocorrect kubectl'
 
 ### FUNCTIONS
 
