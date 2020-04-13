@@ -61,6 +61,8 @@ plugins=(
     asdf
     gcloud
     exa
+    fasd
+    fzf
     zsh-completions
 )
 
@@ -147,3 +149,5 @@ for file in $POSTFILES; do
 done
 
 autoload -U compinit && compinit
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
