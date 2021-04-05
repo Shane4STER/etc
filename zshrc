@@ -62,11 +62,11 @@ plugins=(
     gcloud
     exa
     fasd
-    fzf
+    kubectl
     zsh-completions
 )
 
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 
 case $(uname -s) in
   *Darwin*)
@@ -150,4 +150,4 @@ done
 
 autoload -U compinit && compinit
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+. /opt/asdf-vm/asdf.sh
