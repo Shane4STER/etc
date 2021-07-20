@@ -35,3 +35,5 @@
   rebase = true
 [include]
   path = ~/.gitconfig.overrides
+[init]
+	defaultBranch = main
