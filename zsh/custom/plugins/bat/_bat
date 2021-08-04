@@ -1,2 +1,0 @@
-#compdef bat
-_alternative -o 'cat'
