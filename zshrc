@@ -66,7 +66,7 @@ plugins=(
     zsh-completions
 )
 
-ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_AUTOSTART=true
 
 case $(uname -s) in
   *Darwin*)
