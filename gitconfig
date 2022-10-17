@@ -1,7 +1,7 @@
 [user]
   name = Shane Forster
-  email = me@shaneforster.ca
-  signingkey = 1786CC92
+  email = shane@forster.dev
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIH/4WWRJdJhZouc8Y+GR91gHX8I49m68QQ21oQ39vqn
 [color]
   ui = true
 [core]
@@ -15,7 +15,9 @@
 [github]
   user = shane4ster
 [gpg]
-  program = gpg
+  format = ssh
+[gpg "ssh"]
+  program = "/opt/1Password/op-ssh-sign"
 [commit]
   gpgsign = true
 [filter "lfs"]
@@ -33,7 +35,9 @@
   tool = vimdiff
 [pull]
   rebase = true
+[includeIf "gitdir:~/repo/github.com/ovotech/"]
+  path = ~/.gitconfig.ovo
 [include]
   path = ~/.gitconfig.overrides
 [init]
-	defaultBranch = main
+  defaultBranch = main
