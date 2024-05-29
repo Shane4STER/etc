@@ -27,3 +27,5 @@ Session.vim
 
 # Vim scratch files
 .scratch.vim
+
+*.iml

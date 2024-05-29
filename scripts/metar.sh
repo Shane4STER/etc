@@ -29,6 +29,9 @@ if [ -z $CWX_API_KEY ]; then
   exit 1
 fi
 
-DATA=$(curl -s "https://api.checkwx.com/metar/$STATION" -H "X-API-Key: $CWX_API_KEY" | /usr/local/bin/jq --raw-output .data[0])
+METAR=$(curl -s "https://api.checkwx.com/metar/$STATION" -H "X-API-Key: $CWX_API_KEY" | /usr/bin/jq --raw-output .data[0])
 
-echo $DATA
+TAF=$(curl -s "https://api.checkwx.com/taf/$STATION" -H "X-API-Key: $CWX_API_KEY" | /usr/bin/jq --raw-output .data[0])
+echo $METAR
+
+echo $TAF
