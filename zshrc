@@ -5,6 +5,7 @@ export ZSH_CUSTOM=$HOME/.zsh/custom
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="bullet-train"
+zstyle ':omz:alpha:lib:git' async-prompt no
 
 # Bullettrain config
 BULLETTRAIN_CONTEXT_FG="white"

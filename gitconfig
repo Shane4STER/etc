@@ -1,7 +1,7 @@
 [user]
   name = Shane Forster
   email = shane@forster.dev
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIH/4WWRJdJhZouc8Y+GR91gHX8I49m68QQ21oQ39vqn
+  signingkey = 3F863A24EA9E0446
 [color]
   ui = true
 [core]
@@ -15,10 +15,6 @@
   count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"
 [github]
   user = shane4ster
-[gpg]
-  format = ssh
-[gpg "ssh"]
-  program = "/opt/1Password/op-ssh-sign"
 [commit]
   gpgsign = true
 [filter "lfs"]
