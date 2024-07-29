@@ -29,8 +29,8 @@ set $homeDesk "ASUSTek COMPUTER INC ASUS VP28U 0x00028663"
 set $wallpaper /usr/share/backgrounds/archlinux/small.png
 
 output * scale 1 bg $wallpaper fill
-output $laptop scale 1 pos 0,0
-output $homeDesk pos -960,-2160
+output $laptop scale 1 pos 960,2160
+output $homeDesk pos 0,0
 #
 # Example configuration:
 #
@@ -128,16 +128,26 @@ input type:touchpad {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Ctrl+$left move workspace to output left
+    bindsym $mod+Ctrl+$down move workspace to output down
+    bindsym $mod+Ctrl+$up move workspace to output up
+    bindsym $mod+Ctrl+$right move workspace to output right
+    # Ditto, with arrow keys
+    bindsym $mod+Ctrl+Left move workspace to output left
+    bindsym $mod+Ctrl+Down move workspace to output down
+    bindsym $mod+Ctrl+Up move workspace to output up
+    bindsym $mod+Ctrl+Right move workspace to output right
 #
 # Workspaces:
     set $ws1 1:term
     set $ws2 2:code
-    set $ws3 3:kaluza
-    set $ws4 4:ovo
+    set $ws3 3:work
+    set $ws4 4:overflow
     set $ws5 5:firefox
     set $ws6 6:ref
     set $ws7 7:meet
-    set $ws8 8:secret
+    set $ws8 8:notes
     set $ws9 9:comm
     set $ws10 10:media
 #
@@ -237,6 +247,8 @@ bar {
     # The default just shows the current date and time.
     status_command i3status
 
+    font Source Code Pro
+
     colors {
         statusline #ffffff
         background #323232
@@ -280,11 +292,15 @@ bindsym $mod+Shift+Escape exec makoctl restore
 
 for_window [shell="xwayland"] title_format "[XWayland] %title"
 
-# Autostart
-exec /usr/bin/slack
+assign [class="Slack"] $ws9
+assign [app_id="firefoxdeveloperedition"] $ws5
+assign [instance="spotify"] $ws10
+assign [class="Standard Notes"] $ws8
 
-assign [app_id="slack"] $ws9
-assign [app_id="firefox"] $ws5
-assign [app_id="Spotify"] $ws10
+bindcode 107      exec grimshot savecopy active
+bindcode Shift+107 exec grimshot savecopy area
+bindcode Shift+Ctrl+107  exec grimshot savecopy output
+bindcode Ctrl+107  exec grimshot savecopy window
 
+include ~/.config/sway/config.d/*
 include /etc/sway/config.d/*
