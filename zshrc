@@ -68,6 +68,7 @@ plugins=(
 )
 
 ZSH_TMUX_AUTOSTART=${ZSH_TMUX_AUTOSTART:=true}
+ZSH_TMUX_AUTOCONECT=false
 
 case $(uname -s) in
   *Darwin*)

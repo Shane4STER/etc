@@ -29,3 +29,5 @@ Session.vim
 .scratch.vim
 
 *.iml
+
+.fleet/*

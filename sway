@@ -1,72 +1,72 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
 ### Variables
-#
-# Logo key. Use Mod1 for Alt.
+
+## Keys
 set $mod Mod4
-# Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
+
+## Default Apps
 set $term foot
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-#set $menu dmenu_path | wmenu | xargs swaymsg exec --
-set $menu rofi -modes "drun,run,filebrowser,window" -show drun | xargs swaymsg exec --
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+#set $menu rofi -modes "drun,run,filebrowser,window" -show drun | xargs swaymsg exec --
+#set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
+set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
+set $wifi ~/.config/rofi/modi/nmcli
+set $locker swaylock -f --screenshots --clock --timestr %H:%M:%S --datestr %Y-%m-%d --effect-blur 7x5 --effect-scale 0.5
+
+## Workspaces
+set $ws1 1:term
+set $ws2 2:code
+set $ws3 3:work
+set $ws4 4:overflow
+set $ws5 5:firefox
+set $ws6 6:ref
+set $ws7 7:meet
+set $ws8 8:notes
+set $ws9 9:comm
+set $ws10 10:media
+set $ws11 11:signal
+set $ws12 12:slack
+set $ws13 13:pass
+set $ws14 14:spotify
+set $ws15 15:F5
+set $ws16 16:F6
+set $ws17 17:F7
+set $ws18 18:F8
+set $ws19 19:F9
+set $ws20 20:F10
+
+## Outputs
 set $laptop "Sharp Corporation 0x14F9 Unknown"
 set $homeDesk "ASUSTek COMPUTER INC ASUS VP28U 0x00028663"
 
+## Theming
 set $wallpaper /usr/share/backgrounds/archlinux/small.png
 
+
+
+### Output configuration
 output * scale 1 bg $wallpaper fill
 output $laptop scale 1 pos 960,2160
 output $homeDesk pos 0,0
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
-# Example configuration:
-#
-#exec swayidle -w \
-#         timeout 300 'swaylock -f -i /usr/share/backgrounds/archlinux/small.png' \
-#         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#         before-sleep 'swaylock -f -i /usr/share/backgrounds/archlinux/small.png'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-#exec mako
+smart_gaps on
+gaps inner 10
+default_border pixel 3
+default_floating_border normal
+hide_edge_borders smart
+font pango:Hack Nerd Font 11
+
+### Autostart
+exec swayidle -w \
+         timeout 300 $locker \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep $locker
+exec_always ~/.config/waybar/waybar.sh
+exec_always autotiling-rs
 
 ### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
-#input * xkb_layout custom
 
 input "type:keyboard" {
     # Rebind CapsLock as Control
@@ -91,6 +91,7 @@ input type:touchpad {
     bindsym $mod+d exec $menu
     bindsym $mod+g exec rofi -modes "window" -show window
     bindsym $mod+q exec rofi -modes "filebrowser" -show filebrowser
+    bindsym $mod+End exec $wifi
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -102,8 +103,6 @@ input type:touchpad {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -139,18 +138,6 @@ input type:touchpad {
     bindsym $mod+Ctrl+Up move workspace to output up
     bindsym $mod+Ctrl+Right move workspace to output right
 #
-# Workspaces:
-    set $ws1 1:term
-    set $ws2 2:code
-    set $ws3 3:work
-    set $ws4 4:overflow
-    set $ws5 5:firefox
-    set $ws6 6:ref
-    set $ws7 7:meet
-    set $ws8 8:notes
-    set $ws9 9:comm
-    set $ws10 10:media
-#
     # Switch to workspace
     bindsym $mod+1 workspace $ws1
     bindsym $mod+2 workspace $ws2
@@ -162,6 +149,16 @@ input type:touchpad {
     bindsym $mod+8 workspace $ws8
     bindsym $mod+9 workspace $ws9
     bindsym $mod+0 workspace $ws10
+    bindsym $mod+F1 workspace $ws11
+    bindsym $mod+F2 workspace $ws12
+    bindsym $mod+F3 workspace $ws13
+    bindsym $mod+F4 workspace $ws14
+    bindsym $mod+F5 workspace $ws15
+    bindsym $mod+F6 workspace $ws16
+    bindsym $mod+F7 workspace $ws17
+    bindsym $mod+F8 workspace $ws18
+    bindsym $mod+F9 workspace $ws19
+    bindsym $mod+F10 workspace $ws20
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace $ws1
     bindsym $mod+Shift+2 move container to workspace $ws2
@@ -173,6 +170,16 @@ input type:touchpad {
     bindsym $mod+Shift+8 move container to workspace $ws8
     bindsym $mod+Shift+9 move container to workspace $ws9
     bindsym $mod+Shift+0 move container to workspace $ws10
+    bindsym $mod+Shift+F1 move container to workspace $ws11
+    bindsym $mod+Shift+F2 move container to workspace $ws12
+    bindsym $mod+Shift+F3 move container to workspace $ws13
+    bindsym $mod+Shift+F4 move container to workspace $ws14
+    bindsym $mod+Shift+F5 move container to workspace $ws15
+    bindsym $mod+Shift+F6 move container to workspace $ws16
+    bindsym $mod+Shift+F7 move container to workspace $ws17
+    bindsym $mod+Shift+F8 move container to workspace $ws18
+    bindsym $mod+Shift+F9 move container to workspace $ws19
+    bindsym $mod+Shift+F10 move container to  workspace $ws20
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 # Layout stuff:
@@ -236,25 +243,41 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command i3status
-
-    font Source Code Pro
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+## Window Quick Switching
+# window switch setting
+set $mode_set_switch_window "set_switch_window: [0]-[9]"
+mode $mode_set_switch_window {
+    bindsym 1 mark 1; mode "default"
+    bindsym 2 mark 2; mode "default"
+    bindsym 3 mark 3; mode "default"
+    bindsym 4 mark 4; mode "default"
+    bindsym 5 mark 5; mode "default"
+    bindsym 6 mark 6; mode "default"
+    bindsym 7 mark 7; mode "default"
+    bindsym 8 mark 8; mode "default"
+    bindsym 9 mark 9; mode "default"
+    bindsym 0 mark 0; mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
+bindsym $mod+ctrl+t mode $mode_set_switch_window
+set $mode_switch_window "switch_window: [0]-[9]"
+mode $mode_switch_window {
+    bindsym 1 [con_mark="1"] focus; mode "default"
+    bindsym 2 [con_mark="2"] focus; mode "default"
+    bindsym 3 [con_mark="3"] focus; mode "default"
+    bindsym 4 [con_mark="4"] focus; mode "default"
+    bindsym 5 [con_mark="5"] focus; mode "default"
+    bindsym 6 [con_mark="6"] focus; mode "default"
+    bindsym 7 [con_mark="7"] focus; mode "default"
+    bindsym 8 [con_mark="8"] focus; mode "default"
+    bindsym 9 [con_mark="9"] focus; mode "default"
+    bindsym 0 [con_mark="0"] focus; mode "default"
+    bindsym t mode $mode_set_switch_window
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+t mode $mode_switch_window
 
 ## Custom
 
@@ -271,13 +294,12 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 
 bindsym $mod+x [urgent=latest] focus
 
-set $Locker swaylock -f --screenshots --clock --timestr %H:%M:%S --datestr %Y-%m-%d --effect-blur 7x5 --effect-scale 0.5 --fade-in 0.2
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym l exec --no-startup-id $locker, mode "default"
     bindsym e exec --no-startup-id swaymsg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
@@ -290,17 +312,21 @@ bindsym $mod+P mode "$mode_system"
 bindsym $mod+Escape exec makoctl dismiss
 bindsym $mod+Shift+Escape exec makoctl restore
 
-for_window [shell="xwayland"] title_format "[XWayland] %title"
 
-assign [class="Slack"] $ws9
-assign [app_id="firefoxdeveloperedition"] $ws5
-assign [instance="spotify"] $ws10
-assign [class="Standard Notes"] $ws8
 
 bindcode 107      exec grimshot savecopy active
 bindcode Shift+107 exec grimshot savecopy area
 bindcode Shift+Ctrl+107  exec grimshot savecopy output
 bindcode Ctrl+107  exec grimshot savecopy window
+
+
+for_window [shell="xwayland"] title_format "[X] %title"
+assign [class="Slack"] $ws12
+assign [class="Signal"] $ws11
+assign [app_id="firefoxdeveloperedition"] $ws5
+assign [instance="spotify"] $ws14
+assign [class="Standard Notes"] $ws8
+assign [class="1Password"] $ws13
 
 include ~/.config/sway/config.d/*
 include /etc/sway/config.d/*
