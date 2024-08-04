@@ -7,4 +7,6 @@ METAR=$(curl -s "https://api.checkwx.com/metar/$STATION" -H "X-API-Key: $CWX_API
 
 TAF=$(curl -s "https://api.checkwx.com/taf/$STATION" -H "X-API-Key: $CWX_API_KEY" | /usr/bin/jq --raw-output .data[0])
 
-echo -e "{\"text\":\"${METAR}\", \"tooltip\":\"${TAF}\"}"
+METAR_TIME=${METAR:0:12}
+TAF_TIME=${TAF:9:7}
+echo -e "{\"alt\":\"${METAR}\", \"tooltip\":\"${METAR}  ${TAF}\", \"text\": \"${METAR_TIME} TAF ${TAF_TIME}\"}"

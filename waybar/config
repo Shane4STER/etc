@@ -63,7 +63,7 @@
         "format": "{icon}",
         "format-alt": "{volume}% {icon}",
         "format-alt-click": "click-right",
-        "format-muted": "",
+        "format-muted": "󰝟",
         "format-icons": ["", "", ""],
         "scroll-step": 10,
         "max-volume": 150,
@@ -75,7 +75,9 @@
         "return-type": "json",
         "exec": "~/.config/waybar/modules/spotify.sh",
         "exec-if": "pgrep spotify",
-        "escape": true
+        "escape": true,
+        "max-length": 50,
+        "tooltip": true
     },
     "custom/storage": {
         "format": "{} ",
@@ -95,6 +97,7 @@
     },
     "custom/weather": {
         "format": "{}",
+        "format-alt": "{alt}",
         "interval": 1800,
         "format-alt-click": "click-right",
         "return-type": "json",

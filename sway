@@ -93,7 +93,8 @@ input type:touchpad {
     bindsym $mod+q exec rofi -modes "filebrowser" -show filebrowser
     bindsym $mod+End exec $wifi
     bindsym $mod+Tab exec rofi-playerctl
-    bindsym $mod+Insert exec rofi-emoji
+    bindsym $mod+Insert exec rofimoji
+    bindsym $mod+Shift+Insert exec rofi -modes "nerdy" -show "nerdy"
     bindsym $mod+Shift+b exec rofi-bluetooth
 
     # Drag floating windows by holding down $mod and left mouse button.

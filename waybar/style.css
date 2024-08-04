@@ -69,3 +69,12 @@ window#waybar.solo {
 #custom-storage.critical {
     color:      rgba(238, 46, 36, 1);
 }
+#custom-spotify.paused {
+    color:      rgba(217, 216, 216, 0.4)
+}
+#custom-spotify.playing{
+    color:      rgba(217, 216, 216, 1)
+}
+#custom-spotify.stopped{
+    color:      rgba(217, 0, 0, 0.4)
+}
