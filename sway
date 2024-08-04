@@ -12,7 +12,7 @@ set $term foot
 #set $menu rofi -modes "drun,run,filebrowser,window" -show drun | xargs swaymsg exec --
 #set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
 set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
-set $wifi ~/.config/rofi/modi/nmcli
+set $wifi rofi-wifi-menu
 set $locker swaylock -f --screenshots --clock --timestr %H:%M:%S --datestr %Y-%m-%d --effect-blur 7x5 --effect-scale 0.5
 
 ## Workspaces
@@ -92,6 +92,9 @@ input type:touchpad {
     bindsym $mod+g exec rofi -modes "window" -show window
     bindsym $mod+q exec rofi -modes "filebrowser" -show filebrowser
     bindsym $mod+End exec $wifi
+    bindsym $mod+Tab exec rofi-playerctl
+    bindsym $mod+Insert exec rofi-emoji
+    bindsym $mod+Shift+b exec rofi-bluetooth
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

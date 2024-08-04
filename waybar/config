@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/storage", "backlight", "wireplumber", "network", "idle_inhibitor", "battery", "cpu"],
+    "modules-right": ["custom/spotify", "custom/weather", "custom/storage", "backlight", "wireplumber", "network", "idle_inhibitor", "battery", "cpu"],
     "sway/mode": {
         "format": " {}"
     },
@@ -39,7 +39,7 @@
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -96,6 +96,7 @@
     "custom/weather": {
         "format": "{}",
         "interval": 1800,
+        "format-alt-click": "click-right",
         "return-type": "json",
         "exec": "~/.config/waybar/modules/weather.sh",
         "exec-if": "ping api.checkwx.com -c1"
