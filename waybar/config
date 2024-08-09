@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/spotify", "custom/weather", "custom/storage", "backlight", "wireplumber", "network", "idle_inhibitor", "battery", "cpu"],
+    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/storage", "backlight", "wireplumber", "network", "idle_inhibitor", "battery", "cpu"],
     "sway/mode": {
         "format": " {}"
     },
@@ -76,7 +76,7 @@
         "exec": "~/.config/waybar/modules/spotify.sh",
         "exec-if": "pgrep spotify",
         "escape": true,
-        "max-length": 50,
+        "max-length": 75,
         "tooltip": true
     },
     "custom/storage": {
@@ -114,6 +114,7 @@
     },
     "tray": {
         "icon-size": 15,
-        "spacing": 3
+        "spacing": 3,
+        "max-length": 30
     }
 }

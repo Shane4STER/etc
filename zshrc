@@ -154,4 +154,4 @@ autoload -U compinit && compinit
 
 . /opt/asdf-vm/asdf.sh
 
-neofetch
+fastfetch
