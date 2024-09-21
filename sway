@@ -328,9 +328,11 @@ for_window [shell="xwayland"] title_format "[X] %title"
 assign [class="Slack"] $ws12
 assign [class="Signal"] $ws11
 assign [app_id="firefox-developer-edition"] $ws5
+assign [app_id="LibreWolf"] $ws5
 assign [instance="spotify"] $ws13
 assign [class="Standard Notes"] $ws8
 assign [class="1Password"] $ws9
+assign [class="Proton Pass"] $ws9
 assign [app_id="org.zealdocs.zeal"] $ws6
 
 include ~/.config/sway/config.d/*
