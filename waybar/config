@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/storage", "backlight", "wireplumber", "network", "battery", "cpu"],
+    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/storage", "backlight", "wireplumber", "bluetooth", "network", "battery", "cpu"],
     "sway/mode": {
         "format": " {}"
     },
@@ -56,8 +56,17 @@
             "ethernet": [""],
             "disconnected": [""]
         },
-        "on-click": "foot -e nmtui",
+        "on-click": "foot -e impala",
     "tooltip": false
+    },
+    "bluetooth": {
+        "format-off": "󰂲",
+        "format-on": "󰂯",
+        "format-connected": "󰂱",
+        "format-connected-battery": "󰂱",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-connected-battery": "{device_alias} {device_battery_percentage}%",
+        "on-click": "foot -e bluetuith"
     },
     "wireplumber": {
         "format": "{icon}",
