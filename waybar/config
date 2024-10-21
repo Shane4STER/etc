@@ -5,7 +5,7 @@
 
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/spotify", "custom/weather", "custom/storage", "backlight", "wireplumber", "bluetooth", "network", "battery", "cpu"],
+    "modules-right": ["tray", "custom/spotify", "backlight", "wireplumber", "bluetooth", "network", "battery"],
     "sway/mode": {
         "format": " {}"
     },
@@ -21,43 +21,30 @@
         "format": "{:%a %d %b %H:%M}",
         "tooltip": false
     },
-    "cpu": {
-     "interval": 1,
-     "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
-     "format-icons": [
-          "<span color='#69ff94'>▁</span>", // green
-          "<span color='#2aa9ff'>▂</span>", // blue
-          "<span color='#f8f8f2'>▃</span>", // white
-          "<span color='#f8f8f2'>▄</span>", // white
-          "<span color='#ffffa5'>▅</span>", // yellow
-          "<span color='#ffffa5'>▆</span>", // yellow
-          "<span color='#ff9977'>▇</span>", // orange
-          "<span color='#dd532e'>█</span>"  // red
-     ]
-    },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-alt": "{time} {icon}",
+        "format": "{icon}",
+        "format-alt": "{capacity}% {time} {icon}",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
+        "format-charging": "",
         "interval": 30,
         "states": {
             "warning": 25,
             "critical": 10
         },
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "{capacity}% {time}"
     },
     "network": {
         "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
-        "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": [""],
-            "ethernet": [""],
-            "disconnected": [""]
+            "wifi": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+            "ethernet": [""],
+            "disconnected": ["󰌙"]
         },
         "on-click": "foot -e impala",
-    "tooltip": false
+        "tooltip": true,
+        "tooltip-format-wifi": "Device:\t{ifname}\nIP:\t\t{ipaddr}\nGateway:\t{gwaddr}\nNetmask:\t{netmask}\nSSID:\t\t{essid}\nFrequency:\t{frequency}GHz\nSignal:\t\t{signaldBm}dBm\n",
+        "tooltip-format-ethernet": "Device:\t{ifname}\nIP:\t\t{ipaddr}\nGateway:\t{gwaddr}\nNetmask:\t{netmask}"
     },
     "bluetooth": {
         "format-off": "󰂲",
@@ -70,14 +57,12 @@
     },
     "wireplumber": {
         "format": "{icon}",
-        "format-alt": "{volume}% {icon}",
-        "format-alt-click": "click-right",
         "format-muted": "󰝟",
         "format-icons": ["", "", ""],
         "scroll-step": 10,
         "max-volume": 150,
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "tooltip": false
+        "tooltip-format": "{node_name} {volume}%"
     },
     "custom/spotify": {
         "interval": 1,
@@ -85,40 +70,16 @@
         "exec": "~/.config/waybar/modules/spotify.sh",
         "exec-if": "pgrep spotify",
         "escape": true,
-        "max-length": 75,
+        "max-length": 100,
         "tooltip": true
-    },
-    "custom/storage": {
-        "format": "{} ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
     },
     "backlight": {
         "format": "{icon}",
         "format-alt": "{percent}% {icon}",
         "format-alt-click": "click-right",
-        "format-icons": ["󰱊", "󰱌", "󱤍"],
+        "format-icons": ["󱩎","󱩏","󱩐","󱩑","󱩒","󱩓","󱩔","󱩕","󱩖","󰛨"],
         "on-scroll-down": "brightnessctl -e set 5%-",
-        "on-scroll-up": "brightnessctl -e set 5%+"
-    },
-    "custom/weather": {
-        "format": "{}",
-        "format-alt": "{alt}",
-        "interval": 1800,
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/weather.sh",
-        "exec-if": "ping api.checkwx.com -c1"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
+        "on-scroll-up": "brightnessctl -e set 5%+",
         "tooltip": false
     },
     "tray": {

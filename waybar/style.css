@@ -40,9 +40,9 @@ window#waybar.solo {
     color:      rgba(238, 46, 36, 1);
 }
 
-#mode, #battery, #cpu, #memory, #network, #wireplumber, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail {
-    margin:     0px 6px 0px 10px;
-    min-width:  25px;
+#mode, #battery, #network, #wireplumber, #backlight, #custom-spotify, #bluetooth {
+    margin:     0px 5px;
+    min-width:  20px;
 }
 
 #clock {
@@ -61,14 +61,6 @@ window#waybar.solo {
 #battery.charging {
     color:      rgba(217, 216, 216, 1);
 }
-
-#custom-storage.warning {
-    color:      rgba(255, 210, 4, 1);
-}
-
-#custom-storage.critical {
-    color:      rgba(238, 46, 36, 1);
-}
 #custom-spotify.paused {
     color:      rgba(217, 216, 216, 0.4)
 }
@@ -77,4 +69,13 @@ window#waybar.solo {
 }
 #custom-spotify.stopped{
     color:      rgba(217, 0, 0, 0.4)
+}
+#bluetooth.disabled #bluetooth.off {
+    color:      rgba(217, 0, 0, 0.4)
+}
+#bluetooth.discoverable {
+    color:      rgba(255, 165, 0, 1)
+}
+#bluetooth.pairable {
+    color:      rgba(255, 0, 0, 1)
 }
