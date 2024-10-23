@@ -68,7 +68,7 @@ exec swayidle -w \
 exec_always ~/.config/waybar/waybar.sh
 exec_always autotiling-rs
 exec rofi-polkit-agent
-exec wlsunset
+exec wlsunset -l 55.9 -L -3.1
 
 ### Input configuration
 
