@@ -15,6 +15,7 @@ set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused)
 set $wifi foot -e impala
 set $bluetooth foot -e bluetuith
 set $locker 'swaylock -f --screenshots --clock --timestr %H:%M:%S --effect-blur 7x5 --effect-scale 0.5'
+set $editor foot -e nvim
 
 ## Workspaces
 set $ws1 1:term
@@ -87,6 +88,9 @@ input type:touchpad {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    
+    # Start editor
+    bindsym $mod+Shift+e exec $editor
 
     # Kill focused window
     bindsym $mod+Shift+q kill
