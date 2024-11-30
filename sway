@@ -41,7 +41,7 @@ set $ws20 20:F10
 
 ## Outputs
 set $laptop "Sharp Corporation 0x14F9 Unknown"
-set $homeDesk "ASUSTek COMPUTER INC ASUS VP28U 0x00028663"
+set $homeDesk "Dell Inc. DELL U2723QE 9H81H34"
 
 ## Theming
 set $wallpaper /usr/share/backgrounds/archlinux/small.png
