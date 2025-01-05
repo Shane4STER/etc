@@ -11,11 +11,11 @@ set $right l
 set $term foot
 #set $menu rofi -modes "drun,run,filebrowser,window" -show drun | xargs swaymsg exec --
 #set $menu rofi -m $(expr $(swaymsg -t get_tree | jq '.nodes | map([recurse(.nodes[]?, .floating_nodes[]?) | .focused] | any) | index(true)') - 1) -show drun -run-command 'swaymsg exec -- {cmd}'
-set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused) | index(true)') -show drun -run-command 'swaymsg exec -- {cmd}'
-set $wifi foot -e impala
-set $bluetooth foot -e bluetuith
+set $menu rofi -m $(swaymsg -t get_outputs | jq 'map(select(.active) | .focused) | index(true)') -show 'combi'
+set $wifi foot --title "wifi" -e impala
+set $bluetooth foot --title "bluetooth" -e bluetuith
 set $locker 'swaylock -f --screenshots --clock --timestr %H:%M:%S --effect-blur 7x5 --effect-scale 0.5'
-set $editor foot -e nvim
+set $editor foot --title "nvim" -e nvim
 
 ## Workspaces
 set $ws1 1:term
@@ -307,12 +307,13 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 
 bindsym $mod+x [urgent=latest] focus
 
+bindsym $mod+m exec rofi-ykman
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $locker, mode "default"
     bindsym e exec --no-startup-id swaymsg exit, mode "default"
-    bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
