@@ -1,90 +1,151 @@
 {
-    "layer": "bottom",
-    "position": "top",
-    "height": 30,
-
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/spotify", "backlight", "wireplumber", "bluetooth", "network", "battery"],
-    "sway/mode": {
-        "format": " {}"
+  "layer": "bottom",
+  "position": "top",
+  "height": 30,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/spotify",
+    "backlight",
+    "wireplumber",
+    "bluetooth",
+    "network",
+    "battery"
+  ],
+  "sway/mode": {
+    "format": " {}"
+  },
+  "sway/workspaces": {
+    "format": "{index}:{name}",
+    "disable-scroll": true
+  },
+  "sway/window": {
+    "max-length": 80,
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
     },
-    "sway/workspaces": {
-        "format": "{index}:{name}",
-        "disable-scroll": true
-    },
-    "sway/window": {
-        "max-length": 80,
-        "tooltip": false
-    },
-    "clock": {
-        "format": "{:%a %d %b %H:%M}",
-        "tooltip": false
-    },
-    "battery": {
-        "format": "{icon}",
-        "format-alt": "{capacity}% {time} {icon}",
-        "format-icons": ["", "", "", "", ""],
-        "format-charging": "",
-        "interval": 30,
-        "states": {
-            "warning": 25,
-            "critical": 10
-        },
-        "tooltip": true,
-        "tooltip-format": "{capacity}% {time}"
-    },
-    "network": {
-        "format": "{icon}",
-        "format-icons": {
-            "wifi": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-            "ethernet": [""],
-            "disconnected": ["󰌙"]
-        },
-        "on-click": "foot -e impala",
-        "tooltip": true,
-        "tooltip-format-wifi": "Device:\t{ifname}\nIP:\t\t{ipaddr}\nGateway:\t{gwaddr}\nNetmask:\t{netmask}\nSSID:\t\t{essid}\nFrequency:\t{frequency}GHz\nSignal:\t\t{signaldBm}dBm\n",
-        "tooltip-format-ethernet": "Device:\t{ifname}\nIP:\t\t{ipaddr}\nGateway:\t{gwaddr}\nNetmask:\t{netmask}"
-    },
-    "bluetooth": {
-        "format-off": "󰂲",
-        "format-on": "󰂯",
-        "format-connected": "󰂱",
-        "format-connected-battery": "󰂱",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-connected-battery": "{device_alias} {device_battery_percentage}%",
-        "on-click": "foot -e bluetuith"
-    },
-    "wireplumber": {
-        "format": "{icon}",
-        "format-muted": "󰝟",
-        "format-icons": ["", "", ""],
-        "scroll-step": 10,
-        "max-volume": 150,
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "tooltip-format": "{node_name} {volume}%"
-    },
-    "custom/spotify": {
-        "interval": 1,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify.sh",
-        "exec-if": "pgrep spotify",
-        "escape": true,
-        "max-length": 100,
-        "tooltip": true
-    },
-    "backlight": {
-        "format": "{icon}",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": ["󱩎","󱩏","󱩐","󱩑","󱩒","󱩓","󱩔","󱩕","󱩖","󰛨"],
-        "on-scroll-down": "brightnessctl -e set 5%-",
-        "on-scroll-up": "brightnessctl -e set 5%+",
-        "tooltip": false
-    },
-    "tray": {
-        "icon-size": 15,
-        "spacing": 3,
-        "max-length": 30
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
+  },
+  "battery": {
+    "format": "{icon}",
+    "format-alt": "{capacity}% {time} {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-charging": "",
+    "interval": 30,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip": true,
+    "tooltip-format": "{capacity}% {time}"
+  },
+  "network": {
+    "format": "{icon}",
+    "format-icons": {
+      "wifi": [
+        "󰤯",
+        "󰤟",
+        "󰤢",
+        "󰤥",
+        "󰤨"
+      ],
+      "ethernet": [
+        ""
+      ],
+      "disconnected": [
+        "󰌙"
+      ]
+    },
+    "on-click": "foot -e impala",
+    "tooltip": true,
+    "tooltip-format-wifi": "Device:\t{ifname}\nIP:\t\t{ipaddr}\nGateway:\t{gwaddr}\nNetmask:\t{netmask}\nSSID:\t\t{essid}\nFrequency:\t{frequency}GHz\nSignal:\t\t{signaldBm}dBm\n",
+    "tooltip-format-ethernet": "Device:\t{ifname}\nIP:\t\t{ipaddr}\nGateway:\t{gwaddr}\nNetmask:\t{netmask}"
+  },
+  "bluetooth": {
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "format-connected-battery": "󰂱",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-connected-battery": "{device_alias} {device_battery_percentage}%",
+    "on-click": "foot -e bluetuith"
+  },
+  "wireplumber": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "scroll-step": 10,
+    "max-volume": 150,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "tooltip-format": "{node_name} {volume}%"
+  },
+  "custom/spotify": {
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/waybar/modules/spotify.sh",
+    "exec-if": "pgrep spotify",
+    "escape": true,
+    "max-length": 100,
+    "tooltip": true
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-alt": "{percent}% {icon}",
+    "format-alt-click": "click-right",
+    "format-icons": [
+      "󱩎",
+      "󱩏",
+      "󱩐",
+      "󱩑",
+      "󱩒",
+      "󱩓",
+      "󱩔",
+      "󱩕",
+      "󱩖",
+      "󰛨"
+    ],
+    "on-scroll-down": "brightnessctl -e set 5%-",
+    "on-scroll-up": "brightnessctl -e set 5%+",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 3,
+    "max-length": 30
+  }
 }

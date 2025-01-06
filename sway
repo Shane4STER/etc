@@ -42,6 +42,7 @@ set $ws20 20:F10
 ## Outputs
 set $laptop "Sharp Corporation 0x14F9 Unknown"
 set $homeDesk "Dell Inc. DELL U2723QE 9H81H34"
+set $workDesk "LG Electronics LG Ultra HD 0x0003EB3C"
 
 ## Theming
 set $wallpaper /usr/share/backgrounds/archlinux/small.png
@@ -52,6 +53,7 @@ set $wallpaper /usr/share/backgrounds/archlinux/small.png
 output * scale 1 bg $wallpaper fill
 output $laptop scale 1 pos 960,2160
 output $homeDesk pos 0,0
+output $workdesk pos 0,0
 
 smart_gaps on
 gaps inner 10
